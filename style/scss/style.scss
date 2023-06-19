@@ -1,0 +1,26 @@
+// START IMPORT FONTS
+@import url('https://fonts.googleapis.com/css2?family=Concert+One&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&family=Tillana&display=swap');
+// END IMPORT FONTS
+
+// START RESET STYLESHEET
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+}
+// END RESET STYLESHEET
+
+// START DEFINE VARIABLES
+$color--1: #FFE5D9;
+$color--2: #FFCAD4;
+$color--3: #D8E2DC;
+$color--4: #F4ACB7;
+$color--5: #9D8189;
+
+$font--1: 'Concert One', cursive;
+$font--2: 'Space Mono', monospace;
+$font--3: 'Tillana', cursive;
+// END DEFINE VARIABLES
+
