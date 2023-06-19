@@ -13,7 +13,7 @@
 // END RESET STYLESHEET
 
 // START DEFINE VARIABLES
-$color--1: #FFE5D9;
+$color--1: #f5ddc0;
 $color--2: #FFCAD4;
 $color--3: #D8E2DC;
 $color--4: #F4ACB7;
@@ -24,3 +24,135 @@ $font--2: 'Space Mono', monospace;
 $font--3: 'Tillana', cursive;
 // END DEFINE VARIABLES
 
+// START CONTAINER
+.container {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+// END CONTAINER
+
+// START MAIN NAVIGATION BAR
+.nav {
+    padding: 0px 5vw;
+    width: 100%;
+    height: 130px;
+    background-image: url("../../img/blob-scene-haikei.svg");
+    background-size: cover;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .nav--button {
+        background: none;
+        border: none;
+        outline: none;
+        filter: invert(0.55);
+
+        &:hover {
+            cursor: pointer;
+        }
+
+        img {
+            width: 50px;
+        }
+    }
+
+    .nav--title {
+        position: relative;
+        color: $color--5;
+        font-family: $font--2;
+        font-size: clamp(23px, 5vw, 29px);
+        text-align: center;
+        font-weight: bold;
+    }
+
+}
+
+.nav--list {
+    position: fixed;
+    height: 100vh;
+    width: 100%;
+    backdrop-filter: blur(7px);
+    left: -100vw;
+    top: 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
+
+    .nav--button {
+        position: absolute;
+        top: calc(130px / 2);
+        transform: translateY(-50%);
+        right: 5vw;
+    }
+
+    .nav--item {
+        margin: 20px 0px;
+
+        .nav--link {
+            font-family: $font--2;
+            color: $color--5;
+            font-size: clamp(1.2rem, 5vw, 1.5rem);
+            font-weight: bold;
+            transition: 0.2s cubic-bezier(0.075, 0.82, 0.165, 1);
+
+            &:hover {
+                color: $color--1;
+            }
+        }
+    }
+}
+// END MAIN NAVIGATION BAR
+
+// MEDIA QUERIES
+
+@media screen and (min-width: 950px) {
+
+    .nav {
+        justify-content: center;
+        position: fixed;
+        top: 0;
+
+        
+        .nav--title {
+            display: none;
+        }
+
+        .nav--button {
+            display: none;
+        }
+
+        .nav--list {
+            backdrop-filter: unset;
+            position: relative;
+            left: 0px !important;
+            height: 130px;
+            width: 800px;
+            justify-self: center;
+            flex-direction: row;
+            justify-content: space-evenly;
+
+        }
+
+        .nav--item {
+            margin: unset !important;
+            text-align: center;
+
+            .nav--link {
+                font-size: clamp(16px, 5vw, 18px) !important;
+                font-family: $font--2 !important;
+
+                &:hover {
+                    color: darken($color--5, 20%) !important;
+                    
+                }
+            }
+        }
+    }
+
+}
