@@ -20,16 +20,17 @@
   height: 130px;
   background-image: url("../../img/blob-scene-haikei.svg");
   background-size: cover;
-  position: relative;
+  position: fixed;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.18);
+  z-index: 5;
 }
 .nav .nav--button {
   background: none;
   border: none;
   outline: none;
-  filter: invert(0.55);
 }
 .nav .nav--button:hover {
   cursor: pointer;
@@ -39,17 +40,27 @@
 }
 .nav .nav--title {
   position: relative;
-  color: #9D8189;
+  color: #e33d6c;
   font-family: "Space Mono", monospace;
   font-size: clamp(23px, 5vw, 29px);
   text-align: center;
   font-weight: bold;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+}
+.nav .nav--title img {
+  width: clamp(23px, 5vw, 29px);
+  position: relative;
+  left: 2.5vw;
+  rotate: -80deg;
 }
 
 .nav--list {
   position: fixed;
   height: 100vh;
   width: 100%;
+  background: rgba(255, 255, 255, 0.6);
   -webkit-backdrop-filter: blur(7px);
           backdrop-filter: blur(7px);
   left: -100vw;
@@ -67,24 +78,43 @@
   right: 5vw;
 }
 .nav--list .nav--item {
-  margin: 20px 0px;
+  width: 100%;
+  height: auto;
+  text-align: center;
 }
 .nav--list .nav--item .nav--link {
+  padding: 5vh;
+  display: block;
+  width: 100%;
   font-family: "Space Mono", monospace;
-  color: #9D8189;
-  font-size: clamp(1.2rem, 5vw, 1.5rem);
+  color: #e33d6c;
+  font-size: 1.6rem;
   font-weight: bold;
   transition: 0.2s cubic-bezier(0.075, 0.82, 0.165, 1);
+  text-transform: uppercase;
 }
-.nav--list .nav--item .nav--link:hover {
-  color: #f5ddc0;
+
+.header {
+  position: relative;
+  top: 130px;
+  width: 100%;
+  min-height: 600px;
+  background-image: url("../../img/landing-page-bg.jpg");
+  background-position: center;
+  background-size: cover;
+  padding: 40px 5vw;
+}
+.header .header--title {
+  color: #fff;
+  font-family: "Concert One", cursive;
+  font-size: clamp(45px, 8vw, 65px);
+  text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.64);
+  text-transform: uppercase;
 }
 
 @media screen and (min-width: 950px) {
   .nav {
     justify-content: center;
-    position: fixed;
-    top: 0;
   }
   .nav .nav--title {
     display: none;
@@ -98,20 +128,17 @@
     position: relative;
     left: 0px !important;
     height: 130px;
-    width: 800px;
+    max-width: 1200px;
     justify-self: center;
     flex-direction: row;
     justify-content: space-evenly;
+    background: unset;
   }
   .nav .nav--item {
     margin: unset !important;
     text-align: center;
   }
   .nav .nav--item .nav--link {
-    font-size: clamp(16px, 5vw, 18px) !important;
-    font-family: "Space Mono", monospace !important;
-  }
-  .nav .nav--item .nav--link:hover {
-    color: #685157 !important;
+    font-size: clamp(16px, 1.5rem, 28px) !important;
   }
 }/*# sourceMappingURL=style.css.map */

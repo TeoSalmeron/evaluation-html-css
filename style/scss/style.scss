@@ -2,7 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Concert+One&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&family=Tillana&display=swap');
 // END IMPORT FONTS
 
-// START RESET STYLESHEET
+// RESET STYLESHEET
 * {
     margin: 0;
     padding: 0;
@@ -12,19 +12,20 @@
 }
 // END RESET STYLESHEET
 
-// START DEFINE VARIABLES
+// DEFINE VARIABLES
 $color--1: #f5ddc0;
 $color--2: #FFCAD4;
 $color--3: #D8E2DC;
 $color--4: #F4ACB7;
-$color--5: #9D8189;
+$color--5: rgb(207, 157, 171);
+$color--6: #e33d6c;
 
 $font--1: 'Concert One', cursive;
 $font--2: 'Space Mono', monospace;
 $font--3: 'Tillana', cursive;
 // END DEFINE VARIABLES
 
-// START CONTAINER
+// CONTAINER
 .container {
     width: 100%;
     min-height: 100vh;
@@ -33,23 +34,27 @@ $font--3: 'Tillana', cursive;
 }
 // END CONTAINER
 
-// START MAIN NAVIGATION BAR
+// MAIN NAVIGATION BAR
 .nav {
     padding: 0px 5vw;
     width: 100%;
     height: 130px;
     background-image: url("../../img/blob-scene-haikei.svg");
     background-size: cover;
-    position: relative;
+    position: fixed;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    -webkit-box-shadow: 0px 1px 3px 1px rgba(0,0,0,0.18);
+    -moz-box-shadow: 0px 1px 3px 1px rgba(0,0,0,0.18);
+    box-shadow: 0px 1px 3px 1px rgba(0,0,0,0.18);
+    z-index: 5;
 
     .nav--button {
         background: none;
         border: none;
         outline: none;
-        filter: invert(0.55);
+        // filter: invert(0.55);
 
         &:hover {
             cursor: pointer;
@@ -62,19 +67,29 @@ $font--3: 'Tillana', cursive;
 
     .nav--title {
         position: relative;
-        color: $color--5;
+        color: $color--6;
         font-family: $font--2;
         font-size: clamp(23px, 5vw, 29px);
         text-align: center;
         font-weight: bold;
+        text-transform: uppercase;
+        display: flex;
+        align-items: center;
+        
+        img {
+            width: clamp(23px, 5vw, 29px);
+            position: relative;
+            left: 2.5vw;
+            rotate: -80deg;
+        }
     }
 
 }
-
 .nav--list {
     position: fixed;
     height: 100vh;
     width: 100%;
+    background: rgba(255,255,255,0.6);
     backdrop-filter: blur(7px);
     left: -100vw;
     top: 0px;
@@ -92,33 +107,54 @@ $font--3: 'Tillana', cursive;
     }
 
     .nav--item {
-        margin: 20px 0px;
-
+        width: 100%;
+        height: auto;
+        text-align: center;
         .nav--link {
+            padding: 5vh;
+            display: block;
+            width: 100%;
+            // border: 1px solid;
             font-family: $font--2;
-            color: $color--5;
-            font-size: clamp(1.2rem, 5vw, 1.5rem);
+            color: $color--6;
+            font-size: 1.6rem;
             font-weight: bold;
             transition: 0.2s cubic-bezier(0.075, 0.82, 0.165, 1);
-
-            &:hover {
-                color: $color--1;
-            }
+            text-transform: uppercase;
         }
     }
 }
 // END MAIN NAVIGATION BAR
 
+// HEADER
+.header {
+    position: relative;
+    top: 130px;
+    width: 100%;
+    min-height: 600px;
+    background-image: url("../../img/landing-page-bg.jpg");
+    background-position: center;
+    background-size: cover;
+    padding: 40px 5vw;
+
+    .header--title {
+        color: #fff;
+        font-family: $font--1;
+        font-size: clamp(45px, 8vw, 65px);
+        text-shadow: 2px 2px 3px rgba(0,0,0,0.64);
+        text-transform: uppercase;
+    }
+}
+// END HEADER
+
 // MEDIA QUERIES
 
 @media screen and (min-width: 950px) {
 
+    // NAVIGATION BAR
     .nav {
         justify-content: center;
-        position: fixed;
-        top: 0;
 
-        
         .nav--title {
             display: none;
         }
@@ -132,10 +168,11 @@ $font--3: 'Tillana', cursive;
             position: relative;
             left: 0px !important;
             height: 130px;
-            width: 800px;
+            max-width: 1200px;
             justify-self: center;
             flex-direction: row;
             justify-content: space-evenly;
+            background: unset;
 
         }
 
@@ -144,15 +181,9 @@ $font--3: 'Tillana', cursive;
             text-align: center;
 
             .nav--link {
-                font-size: clamp(16px, 5vw, 18px) !important;
-                font-family: $font--2 !important;
-
-                &:hover {
-                    color: darken($color--5, 20%) !important;
-                    
-                }
+                font-size: clamp(16px, 1.5rem, 28px) !important;
             }
         }
     }
-
+    // END NAVIGATION BAR
 }
