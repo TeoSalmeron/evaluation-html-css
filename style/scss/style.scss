@@ -10,6 +10,10 @@
     list-style: none;
     text-decoration: none;
 }
+
+html {
+    scroll-behavior: smooth;
+}
 // END RESET STYLESHEET
 
 // DEFINE VARIABLES
@@ -23,6 +27,7 @@ $color--6: #e33d6c;
 $font--1: 'Concert One', cursive;
 $font--2: 'Space Mono', monospace;
 $font--3: 'Tillana', cursive;
+$font--4: 'Open Sans', sans-serif;
 // END DEFINE VARIABLES
 
 // CONTAINER
@@ -69,7 +74,7 @@ $font--3: 'Tillana', cursive;
         position: relative;
         color: $color--6;
         font-family: $font--2;
-        font-size: clamp(23px, 5vw, 29px);
+        font-size: clamp(23px, 7vw, 29px);
         text-align: center;
         font-weight: bold;
         text-transform: uppercase;
@@ -77,7 +82,7 @@ $font--3: 'Tillana', cursive;
         align-items: center;
         
         img {
-            width: clamp(23px, 5vw, 29px);
+            width: clamp(23px, 7vw, 29px);
             position: relative;
             left: 2.5vw;
             rotate: -80deg;
@@ -115,10 +120,10 @@ $font--3: 'Tillana', cursive;
             display: block;
             width: 100%;
             // border: 1px solid;
-            font-family: $font--2;
+            font-family: $font--1;
             color: $color--6;
-            font-size: 1.6rem;
-            font-weight: bold;
+            font-size: 2rem;
+            // font-weight: bold;
             transition: 0.2s cubic-bezier(0.075, 0.82, 0.165, 1);
             text-transform: uppercase;
         }
@@ -136,6 +141,9 @@ $font--3: 'Tillana', cursive;
     background-position: center;
     background-size: cover;
     padding: 40px 5vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
 
     .header--title {
         color: #fff;
@@ -144,8 +152,59 @@ $font--3: 'Tillana', cursive;
         text-shadow: 2px 2px 3px rgba(0,0,0,0.64);
         text-transform: uppercase;
     }
+
+    .header--link {
+        color: #fff;
+        font-family: $font--2;
+        align-self: center;
+        background: $color--6;
+        padding: 10px 20px;
+        border-radius: 40px;
+        text-transform: uppercase;
+        font-size: 1.1rem;
+        -webkit-box-shadow: 0px 1px 3px 1px rgba(0,0,0,0.18);
+        -moz-box-shadow: 0px 1px 3px 1px rgba(0,0,0,0.18);
+        box-shadow: 0px 1px 3px 1px rgba(0,0,0,0.18);
+        font-weight: 500;
+        transition: 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
+
+        &:hover {
+            color: $color--6;
+            background: #fff;
+        }
+    
+    }
 }
 // END HEADER
+
+// MAIN
+.main {
+    padding: 170px 5vw 90px;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+
+    h2 {
+        margin: 30px 0px;
+        font-family: $font--2;
+        color: $color--6;
+        font-size: 1.7rem;
+        max-width: 500px;
+        text-align: center;
+    }
+
+    p {
+        font-family: $font--4;
+        color: $color--5;
+        font-weight: lighter;
+        font-size: 1.2rem;
+        text-align: justify;
+        max-width: 950px;
+    }
+}
+// END MAIN
 
 // MEDIA QUERIES
 

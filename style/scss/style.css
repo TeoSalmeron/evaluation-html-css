@@ -7,6 +7,10 @@
   text-decoration: none;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 .container {
   width: 100%;
   min-height: 100vh;
@@ -42,7 +46,7 @@
   position: relative;
   color: #e33d6c;
   font-family: "Space Mono", monospace;
-  font-size: clamp(23px, 5vw, 29px);
+  font-size: clamp(23px, 7vw, 29px);
   text-align: center;
   font-weight: bold;
   text-transform: uppercase;
@@ -50,7 +54,7 @@
   align-items: center;
 }
 .nav .nav--title img {
-  width: clamp(23px, 5vw, 29px);
+  width: clamp(23px, 7vw, 29px);
   position: relative;
   left: 2.5vw;
   rotate: -80deg;
@@ -86,10 +90,9 @@
   padding: 5vh;
   display: block;
   width: 100%;
-  font-family: "Space Mono", monospace;
+  font-family: "Concert One", cursive;
   color: #e33d6c;
-  font-size: 1.6rem;
-  font-weight: bold;
+  font-size: 2rem;
   transition: 0.2s cubic-bezier(0.075, 0.82, 0.165, 1);
   text-transform: uppercase;
 }
@@ -103,6 +106,9 @@
   background-position: center;
   background-size: cover;
   padding: 40px 5vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
 }
 .header .header--title {
   color: #fff;
@@ -110,6 +116,47 @@
   font-size: clamp(45px, 8vw, 65px);
   text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.64);
   text-transform: uppercase;
+}
+.header .header--link {
+  color: #fff;
+  font-family: "Space Mono", monospace;
+  align-self: center;
+  background: #e33d6c;
+  padding: 10px 20px;
+  border-radius: 40px;
+  text-transform: uppercase;
+  font-size: 1.1rem;
+  box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.18);
+  font-weight: 500;
+  transition: 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+.header .header--link:hover {
+  color: #e33d6c;
+  background: #fff;
+}
+
+.main {
+  padding: 170px 5vw 90px;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.main h2 {
+  margin: 30px 0px;
+  font-family: "Space Mono", monospace;
+  color: #e33d6c;
+  font-size: 1.7rem;
+  max-width: 500px;
+  text-align: center;
+}
+.main p {
+  font-family: "Open Sans", sans-serif;
+  color: rgb(207, 157, 171);
+  font-weight: lighter;
+  font-size: 1.2rem;
+  text-align: justify;
+  max-width: 950px;
 }
 
 @media screen and (min-width: 950px) {
