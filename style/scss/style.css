@@ -187,7 +187,13 @@ html {
 .main .main--member-impact .member-impact--title {
   font-size: clamp(2.1rem, 7vw, 2.5rem);
   font-family: "Space Mono", monospace;
-  color: #479a51;
+  color: #e33d6c;
+  text-transform: uppercase;
+}
+.main .main--member-impact .member-impact--title2 {
+  font-size: clamp(1.7rem, 7vw, 2rem);
+  font-family: "Tillana", cursive;
+  color: rgb(207, 157, 171);
   text-transform: uppercase;
 }
 .main .main--member-impact .member-impact--box {
@@ -209,18 +215,18 @@ html {
 }
 .main .main--member-impact .member-impact--box .box--item .item--title {
   font-family: "Signika Negative", sans-serif;
-  color: #e33d6c;
+  color: gray;
   font-size: 1rem;
 }
 .main .main--member-impact .member-impact--box .box--item .item--number {
-  color: #479a51;
+  color: #e33d6c;
   font-size: 3rem;
 }
 
 .action {
   position: relative;
-  top: -4px;
-  border-top: 4px solid #FFCAD4;
+  top: -9px;
+  border-top: 9px solid #FFCAD4;
   width: 100%;
   background: #f5ddc0;
   height: auto;
@@ -261,7 +267,7 @@ html {
 
 .separator {
   position: relative;
-  top: -5px;
+  top: -9px;
   z-index: -1;
   width: 100%;
   height: 150px;

@@ -235,7 +235,14 @@ $font--4: 'Open Sans', sans-serif;
         .member-impact--title {
             font-size: clamp(2.1rem, 7vw, 2.5rem);
             font-family: $font--2;
-            color: $color--4;
+            color: $color--6;
+            text-transform: uppercase;
+        }
+
+        .member-impact--title2 {
+            font-size: clamp(1.7rem, 7vw, 2rem);
+            font-family: $font--3;
+            color: $color--5;
             text-transform: uppercase;
         }
 
@@ -258,12 +265,12 @@ $font--4: 'Open Sans', sans-serif;
     
                 .item--title {
                     font-family: $font--1;
-                    color: $color--6;
+                    color: gray;
                     font-size: 1rem;
                 }
     
                 .item--number {
-                    color: $color--4;
+                    color: $color--6;
                     font-size: 3rem;
                 }
             }
@@ -276,8 +283,8 @@ $font--4: 'Open Sans', sans-serif;
 // SECTION ACTION
 .action {
     position: relative;
-    top: -4px;
-    border-top: 4px solid $color--2;
+    top: -9px;
+    border-top: 9px solid $color--2;
     width: 100%;
     background: $color--1;
     height: auto;
@@ -324,7 +331,7 @@ $font--4: 'Open Sans', sans-serif;
 // SECTION SEPARATOR
 .separator {
     position: relative;
-    top: -5px;
+    top: -9px;
     z-index: -1;
     width: 100%;
     height: 150px;
