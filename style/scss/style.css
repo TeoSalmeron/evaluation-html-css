@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Concert+One&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&family=Tillana&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Signika+Negative:wght@300;400;500;600;700&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&family=Tillana&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -11,6 +11,10 @@ html {
   scroll-behavior: smooth;
 }
 
+.box--max-width {
+  max-width: 1300px;
+}
+
 .container {
   width: 100%;
   min-height: 100vh;
@@ -19,7 +23,7 @@ html {
 }
 
 .nav {
-  padding: 0px 5vw;
+  padding: 0px 7vw;
   width: 100%;
   height: 130px;
   background-image: url("../../img/blob-scene-haikei.svg");
@@ -78,7 +82,7 @@ html {
   position: absolute;
   top: 65px;
   transform: translateY(-50%);
-  right: 5vw;
+  right: 7vw;
 }
 .nav--list .nav--item {
   width: 100%;
@@ -89,7 +93,7 @@ html {
   padding: 5vh;
   display: block;
   width: 100%;
-  font-family: "Concert One", cursive;
+  font-family: "Signika Negative", sans-serif;
   color: #e33d6c;
   font-size: 2rem;
   transition: 0.2s cubic-bezier(0.075, 0.82, 0.165, 1);
@@ -104,14 +108,14 @@ html {
   background-image: url("../../img/landing-page-bg.jpg");
   background-position: center;
   background-size: cover;
-  padding: 40px 5vw;
+  padding: 40px 7vw;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
 }
 .header .header--title {
   color: #fff;
-  font-family: "Concert One", cursive;
+  font-family: "Signika Negative", sans-serif;
   font-size: clamp(45px, 8vw, 65px);
   text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.64);
   text-transform: uppercase;
@@ -120,7 +124,7 @@ html {
   color: #fff;
   font-family: "Space Mono", monospace;
   align-self: center;
-  background: #e33d6c;
+  background: #479a51;
   padding: 10px 20px;
   border-radius: 15px;
   text-transform: uppercase;
@@ -130,17 +134,16 @@ html {
   transition: 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 .header .header--link:hover {
-  color: #e33d6c;
+  color: #479a51;
   background: #fff;
 }
 
 .main {
-  padding: 170px 5vw 0px;
+  padding: 170px 7vw 0px;
   background-size: cover;
   display: flex;
   flex-direction: column;
   align-items: center;
-  max-width: 950px;
   margin: auto;
 }
 .main h2 {
@@ -149,7 +152,7 @@ html {
   margin: 30px 0px;
   font-family: "Space Mono", monospace;
   color: #e33d6c;
-  font-size: 1.6rem;
+  font-size: 1.7rem;
   max-width: 500px;
   text-align: center;
   text-transform: uppercase;
@@ -157,9 +160,8 @@ html {
 .main p {
   position: relative;
   z-index: 5;
-  font-family: "Open Sans", sans-serif;
+  font-family: "Signika Negative", sans-serif;
   color: gray;
-  font-weight: lighter;
   font-size: 1.2rem;
   text-align: justify;
 }
@@ -167,21 +169,21 @@ html {
   margin-bottom: 70px;
 }
 .main .main--member-impact {
-  max-width: 950px;
   width: 100%;
   height: auto;
   background: #f5ddc0;
   border-radius: 15px;
   border-bottom-left-radius: 0px;
   border-bottom-right-radius: 0px;
-  padding: 0px 5vw;
+  padding: 20px 7vw;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 .main .main--member-impact .member-impact--title {
-  font-size: 2rem;
+  font-size: clamp(2.1rem, 7vw, 2.5rem);
   font-family: "Space Mono", monospace;
+  color: #479a51;
   text-transform: uppercase;
 }
 .main .main--member-impact .member-impact--box {
@@ -202,7 +204,7 @@ html {
   margin: 20px 0px;
 }
 .main .main--member-impact .member-impact--box .box--item .item--title {
-  font-family: "Concert One", cursive;
+  font-family: "Signika Negative", sans-serif;
   font-weight: 100;
   color: #e33d6c;
   font-size: 1rem;
@@ -212,6 +214,53 @@ html {
   font-size: 3rem;
 }
 
+.action {
+  width: 100%;
+  background: #f5ddc0;
+  height: auto;
+  font-family: "Signika Negative", sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.action .action--content {
+  width: 100%;
+  padding: 20px 7vw;
+  max-width: 1300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.action .action--title {
+  color: #e33d6c;
+  font-family: "Space Mono", monospace;
+  font-size: 1.7rem;
+  text-transform: uppercase;
+  margin: 20px 0px;
+}
+.action .action--paragraph {
+  width: 100%;
+  color: gray;
+  font-size: 1.2rem;
+  text-align: justify;
+  margin: 20px 0px;
+}
+.action .action--arrow-down {
+  position: relative;
+  font-size: 3.5rem;
+  color: #e33d6c;
+  rotate: 90deg;
+  animation: 0.5s cubic-bezier(0.215, 0.61, 0.355, 1) alternate-reverse infinite up-and-down;
+}
+
+@keyframes up-and-down {
+  0% {
+    bottom: 0px;
+  }
+  100% {
+    bottom: 10px;
+  }
+}
 @media screen and (min-width: 650px) {
   .main .member-impact--box {
     flex-direction: row !important;

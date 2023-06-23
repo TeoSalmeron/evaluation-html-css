@@ -1,5 +1,5 @@
 // START IMPORT FONTS
-@import url('https://fonts.googleapis.com/css2?family=Concert+One&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&family=Tillana&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Signika+Negative:wght@300;400;500;600;700&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&family=Tillana&display=swap');
 // END IMPORT FONTS
 
 // RESET STYLESHEET
@@ -24,11 +24,16 @@ $color--4: #479a51;
 $color--5: rgb(207, 157, 171);
 $color--6: #e33d6c;
 
-$font--1: 'Concert One', cursive;
+$font--1: 'Signika Negative', sans-serif;
 $font--2: 'Space Mono', monospace;
 $font--3: 'Tillana', cursive;
 $font--4: 'Open Sans', sans-serif;
 // END DEFINE VARIABLES
+
+// COMMON CLASSES
+.box--max-width {
+    max-width: 1300px;
+}
 
 // CONTAINER
 .container {
@@ -41,7 +46,7 @@ $font--4: 'Open Sans', sans-serif;
 
 // MAIN NAVIGATION BAR
 .nav {
-    padding: 0px 5vw;
+    padding: 0px 7vw;
     width: 100%;
     height: 130px;
     background-image: url("../../img/blob-scene-haikei.svg");
@@ -108,7 +113,7 @@ $font--4: 'Open Sans', sans-serif;
         position: absolute;
         top: calc(130px / 2);
         transform: translateY(-50%);
-        right: 5vw;
+        right: 7vw;
     }
 
     .nav--item {
@@ -140,7 +145,7 @@ $font--4: 'Open Sans', sans-serif;
     background-image: url("../../img/landing-page-bg.jpg");
     background-position: center;
     background-size: cover;
-    padding: 40px 5vw;
+    padding: 40px 7vw;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
@@ -157,7 +162,7 @@ $font--4: 'Open Sans', sans-serif;
         color: #fff;
         font-family: $font--2;
         align-self: center;
-        background: $color--6;
+        background: $color--4;
         padding: 10px 20px;
         border-radius: 15px;
         text-transform: uppercase;
@@ -169,7 +174,7 @@ $font--4: 'Open Sans', sans-serif;
         transition: 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
 
         &:hover {
-            color: $color--6;
+            color: $color--4;
             background: #fff;
         }
     
@@ -179,12 +184,11 @@ $font--4: 'Open Sans', sans-serif;
 
 // MAIN
 .main {
-    padding: 170px 5vw 0px;
+    padding: 170px 7vw 0px;
     background-size: cover;
     display: flex;
     flex-direction: column;
     align-items: center;
-    max-width: 950px;
     margin: auto;
     
     h2 {
@@ -193,7 +197,7 @@ $font--4: 'Open Sans', sans-serif;
         margin: 30px 0px;
         font-family: $font--2;
         color: $color--6;
-        font-size: 1.6rem;
+        font-size: 1.7rem;
         max-width: 500px;
         text-align: center;
         text-transform: uppercase;
@@ -202,9 +206,8 @@ $font--4: 'Open Sans', sans-serif;
     p {
         position: relative;
         z-index: 5;
-        font-family: $font--4;
+        font-family: $font--1;
         color: gray;
-        font-weight: lighter;
         font-size: 1.2rem;
         text-align: justify;
     }
@@ -214,21 +217,21 @@ $font--4: 'Open Sans', sans-serif;
     }
 
     .main--member-impact {
-        max-width: 950px;
         width: 100%;
         height: auto;
         background: $color--1;
         border-radius: 15px;
         border-bottom-left-radius: 0px;
         border-bottom-right-radius: 0px;
-        padding: 0px 5vw;
+        padding: 20px 7vw;
         display: flex;
         flex-direction: column;
         align-items: center;
 
         .member-impact--title {
-            font-size: 2rem;
+            font-size: clamp(2.1rem, 7vw, 2.5rem);
             font-family: $font--2;
+            color: $color--4;
             text-transform: uppercase;
         }
 
@@ -266,6 +269,64 @@ $font--4: 'Open Sans', sans-serif;
     }
 }
 // END MAIN
+
+// SECTION ACTION
+.action {
+    width: 100%;
+    background: $color--1;
+    height: auto;
+    font-family: $font--1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .action--content {
+        width: 100%;
+        padding: 20px 7vw;
+        max-width: 1300px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .action--title {
+        color: $color--6;
+        font-family: $font--2;
+        font-size: 1.7rem;
+        text-transform: uppercase;
+        margin: 20px 0px;
+    }
+
+    .action--paragraph {
+        width: 100%;
+        color: gray;
+        font-size: 1.2rem;
+        text-align: justify;
+        margin: 20px 0px;
+    }
+    
+    .action--arrow-down {
+        position: relative;
+        font-size: 3.5rem;
+        color: $color--6;
+        rotate: 90deg;
+        animation: 0.5s cubic-bezier(0.215, 0.610, 0.355, 1) alternate-reverse infinite up-and-down;
+    }
+}
+// END SECTION ACTION
+
+// ANIMATIONS
+
+@keyframes up-and-down {
+    0% {
+        bottom: 0px;
+    }
+
+    100% {
+        bottom: 10px;
+    }
+    
+}
 
 // MEDIA QUERIES
 
