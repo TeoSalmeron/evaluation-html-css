@@ -224,7 +224,7 @@ $font--4: 'Open Sans', sans-serif;
 
 .events--header {
     
-    background-image: url("/img/events-header.jpg") !important;
+    background-image: url("../img/events-header.jpg") !important;
     justify-content: center !important;
 }
 // END HEADER
@@ -505,7 +505,7 @@ $font--4: 'Open Sans', sans-serif;
 .footer {
     width: 100%;
     height: auto;
-    background: url("/img/blob-scene-haikei.svg");
+    background: url("../img/blob-scene-haikei.svg");
     background-size: cover;
     padding: 40px 7vw;
     display: flex;
