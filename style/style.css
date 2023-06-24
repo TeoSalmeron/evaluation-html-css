@@ -15,6 +15,11 @@ html {
   max-width: 1300px;
 }
 
+.down {
+  position: relative;
+  top: 130px;
+}
+
 .container {
   width: 100%;
   min-height: 100vh;
@@ -122,6 +127,7 @@ html {
   font-size: clamp(45px, 8vw, 65px);
   text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.64);
   text-transform: uppercase;
+  text-align: center;
 }
 .header .header--link {
   color: #fff;
@@ -139,6 +145,25 @@ html {
 .header .header--link:hover {
   color: rgb(227, 61, 108);
   background: #fff;
+}
+.header .header--paragraph {
+  color: #fff;
+  text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.64);
+  font-family: "Signika Negative", sans-serif;
+  text-align: justify;
+  max-width: 600px;
+  font-size: clamp(1.3rem, 5vw, 1.5rem);
+  align-self: center;
+  margin: 40px 0px;
+}
+.header .header--paragraph .paragraph--span {
+  color: rgb(221, 159, 177);
+  font-size: clamp(1.2rem, 5vw, 2rem);
+}
+
+.events--header {
+  background-image: url("/img/events-header.jpg") !important;
+  justify-content: center !important;
 }
 
 .main {
