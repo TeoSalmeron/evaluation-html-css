@@ -1,5 +1,5 @@
 // SCROLL REVEALS
-ScrollReveal().reveal(".sequenced", {interval: 250})
+ScrollReveal().reveal(".sequenced", {interval: 200})
 ScrollReveal().reveal(".left", {origin: "left", distance: "250px"})
 ScrollReveal().reveal(".right", {origin: "right", distance: "250px"})
 

@@ -183,6 +183,7 @@ html {
   align-items: center;
   position: relative;
   z-index: 5;
+  overflow-x: hidden;
 }
 .main .main--member-impact .member-impact--title {
   font-size: clamp(2.1rem, 7vw, 2.5rem);
@@ -280,7 +281,7 @@ html {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 0px 7vw 40px;
+  padding: 0px 7vw 90px;
   max-width: 1300px;
   margin: auto;
 }
@@ -316,6 +317,58 @@ html {
   cursor: pointer;
   background: #fff;
   color: #e33d6c;
+}
+
+.footer {
+  width: 100%;
+  height: auto;
+  background: url("/img/blob-scene-haikei.svg");
+  background-size: cover;
+  padding: 40px 7vw;
+}
+.footer .footer--content {
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 600px;
+}
+.footer .footer--content .content--copyrights {
+  font-size: 1.2rem;
+  color: #e33d6c;
+  font-family: "Signika Negative", sans-serif;
+  margin: 20px 0px;
+  text-align: center;
+}
+.footer .footer--content .content--items {
+  display: flex;
+  flex-direction: column;
+  align-self: flex-start;
+}
+.footer .footer--content .content--items .items--item {
+  display: flex;
+  align-items: center;
+  margin: 20px 0px;
+}
+.footer .footer--content .content--items .items--item img {
+  width: 40px;
+  margin-right: clamp(15px, 5vw, 45px);
+}
+.footer .footer--content .content--items .items--item p, .footer .footer--content .content--items .items--item a {
+  color: rgb(96, 96, 96);
+  font-family: "Space Mono", monospace;
+  font-size: 0.9rem;
+}
+.footer .footer--content .content--items .items--item a {
+  color: #e33d6c;
+}
+.footer .footer--content .content--paragraph {
+  color: rgb(96, 96, 96);
+  font-family: "Signika Negative", sans-serif;
+  font-weight: 100;
+  font-size: 0.9rem;
+  align-self: flex-start;
+  margin: 20px 0px;
 }
 
 @keyframes up-and-down {
