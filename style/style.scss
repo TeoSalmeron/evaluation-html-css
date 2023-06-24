@@ -18,11 +18,11 @@ html {
 
 // DEFINE VARIABLES
 $color--1: #f5ddc0;
-$color--2: #FFCAD4;
+$color--2: #d26c7f;
 $color--3: #D8E2DC;
 $color--4: #479a51;
-$color--5: rgb(207, 157, 171);
-$color--6: #e33d6c;
+$color--5: rgb(221, 159, 177);
+$color--6: rgb(227, 61, 108);
 
 $font--1: 'Signika Negative', sans-serif;
 $font--2: 'Space Mono', monospace;
@@ -127,10 +127,10 @@ $font--4: 'Open Sans', sans-serif;
             display: block;
             width: 100%;
             // border: 1px solid;
-            font-family: $font--1;
+            font-family: $font--2;
             color: $color--6;
             font-size: 2rem;
-            // font-weight: bold;
+            font-weight: bold;
             transition: 0.2s cubic-bezier(0.075, 0.82, 0.165, 1);
             text-transform: uppercase;
         }
@@ -233,6 +233,7 @@ $font--4: 'Open Sans', sans-serif;
         align-items: center;
         position: relative;
         z-index: 5;
+        overflow-x: hidden;
 
         .member-impact--title {
             font-size: clamp(2.1rem, 7vw, 2.5rem);
@@ -348,7 +349,7 @@ $font--4: 'Open Sans', sans-serif;
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 0px 7vw 40px;
+    padding: 0px 7vw 90px;
     max-width: 1300px;
     margin: auto;
 
@@ -391,6 +392,68 @@ $font--4: 'Open Sans', sans-serif;
     }
 }
 // END GIVEAWAY
+
+// FOOTER
+.footer {
+    width: 100%;
+    height: auto;
+    background: url("/img/blob-scene-haikei.svg");
+    background-size: cover;
+    padding: 40px 7vw;
+
+    .footer--content {
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        max-width: 600px;
+        
+        .content--copyrights {
+            font-size: 1.2rem;
+            color: $color--6;
+            font-family: $font--1;
+            margin: 20px 0px;
+            text-align: center;
+        }
+
+        .content--items {
+            display: flex;
+            flex-direction: column;
+            align-self: flex-start;
+
+            .items--item {
+                display: flex;
+                align-items: center;
+                margin: 20px 0px;
+
+                img {
+                    width: 40px;
+                    margin-right: clamp(15px, 5vw, 45px);
+                }
+
+                p, a {
+                    color: rgb(96, 96, 96);
+                    font-family: $font--2;
+                    font-size: 0.9rem;
+                }
+
+                a {
+                    color: $color--6;
+                }
+            }
+        }
+
+        .content--paragraph {
+            color: rgb(96, 96, 96);
+            font-family: $font--1;
+            font-weight: 100;
+            font-size: 0.9rem;
+            align-self: flex-start;
+            margin: 20px 0px;
+        }
+    }
+}
+// END FOOTER
 
 // ANIMATIONS
 @keyframes up-and-down {
@@ -436,7 +499,7 @@ $font--4: 'Open Sans', sans-serif;
             backdrop-filter: unset;
             position: relative;
             left: 0px !important;
-            height: 130px;
+            height: 80px;
             max-width: 1200px;
             justify-self: center;
             flex-direction: row;
@@ -448,9 +511,15 @@ $font--4: 'Open Sans', sans-serif;
         .nav--item {
             margin: unset !important;
             text-align: center;
+            // border-right: 1px solid $color--6;
 
             .nav--link {
                 font-size: clamp(16px, 1.5rem, 28px) !important;
+
+                &:hover {
+                    background: rgba(227, 61, 108, 0.8);
+                    color: #fff !important;
+                }
             }
         }
     }

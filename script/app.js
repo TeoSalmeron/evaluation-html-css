@@ -1,5 +1,5 @@
 // SCROLL REVEALS
-ScrollReveal().reveal(".sequenced", {interval: 250})
+ScrollReveal().reveal(".sequenced", {interval: 75})
 ScrollReveal().reveal(".left", {origin: "left", distance: "250px"})
 ScrollReveal().reveal(".right", {origin: "right", distance: "250px"})
 
@@ -29,21 +29,21 @@ navCloseMenu.addEventListener('click', () => {
 })
 
 //---> Hover effect on nav links
-for (let link of navLinks) {
-    link.addEventListener('mouseenter', (e) => {
-        let targetLink = e.target
-        for(let link of navLinks) {
-            if(link !== targetLink) {
-                link.style.color = "rgb(207, 157, 171)"
-            } else {
-                link.style.color = "#e33d6c"
-            }
-        }
-    })
+// for (let link of navLinks) {
+//     link.addEventListener('mouseenter', (e) => {
+//         let targetLink = e.target
+//         for(let link of navLinks) {
+//             if(link !== targetLink) {
+//                 link.style.color = "rgb(207, 157, 171)"
+//             } else {
+//                 link.style.color = "#e33d6c"
+//             }
+//         }
+//     })
 
-    link.addEventListener('mouseleave', () => {
-        for(let link of navLinks) {
-            link.style.color = "#e33d6c"
-        }
-    })
-}
+//     link.addEventListener('mouseleave', () => {
+//         for(let link of navLinks) {
+//             link.style.color = "#e33d6c"
+//         }
+//     })
+// }

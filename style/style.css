@@ -50,7 +50,7 @@ html {
 }
 .nav .nav--title {
   position: relative;
-  color: #e33d6c;
+  color: rgb(227, 61, 108);
   font-family: "Space Mono", monospace;
   font-size: clamp(23px, 7vw, 29px);
   text-align: center;
@@ -95,9 +95,10 @@ html {
   padding: 5vh;
   display: block;
   width: 100%;
-  font-family: "Signika Negative", sans-serif;
-  color: #e33d6c;
+  font-family: "Space Mono", monospace;
+  color: rgb(227, 61, 108);
   font-size: 2rem;
+  font-weight: bold;
   transition: 0.2s cubic-bezier(0.075, 0.82, 0.165, 1);
   text-transform: uppercase;
 }
@@ -126,7 +127,7 @@ html {
   color: #fff;
   font-family: "Signika Negative", sans-serif;
   align-self: center;
-  background: #e33d6c;
+  background: rgb(227, 61, 108);
   padding: 10px 20px;
   border-radius: 0px;
   text-transform: uppercase;
@@ -136,7 +137,7 @@ html {
   transition: 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 .header .header--link:hover {
-  color: #e33d6c;
+  color: rgb(227, 61, 108);
   background: #fff;
 }
 
@@ -153,7 +154,7 @@ html {
   z-index: 5;
   margin: 30px 0px;
   font-family: "Space Mono", monospace;
-  color: #e33d6c;
+  color: rgb(227, 61, 108);
   font-size: 1.7rem;
   max-width: 500px;
   text-align: center;
@@ -171,9 +172,9 @@ html {
   margin-bottom: 70px;
 }
 .main .main--member-impact {
-  border-left: 9px solid #FFCAD4;
-  border-right: 9px solid #FFCAD4;
-  border-top: 9px solid #FFCAD4;
+  border-left: 9px solid #d26c7f;
+  border-right: 9px solid #d26c7f;
+  border-top: 9px solid #d26c7f;
   width: 100%;
   height: auto;
   background: #f5ddc0;
@@ -185,17 +186,18 @@ html {
   align-items: center;
   position: relative;
   z-index: 5;
+  overflow-x: hidden;
 }
 .main .main--member-impact .member-impact--title {
   font-size: clamp(2.1rem, 7vw, 2.5rem);
   font-family: "Space Mono", monospace;
-  color: #e33d6c;
+  color: rgb(227, 61, 108);
   text-transform: uppercase;
 }
 .main .main--member-impact .member-impact--title2 {
   font-size: clamp(1.7rem, 7vw, 2rem);
   font-family: "Tillana", cursive;
-  color: rgb(207, 157, 171);
+  color: rgb(221, 159, 177);
   text-transform: uppercase;
 }
 .main .main--member-impact .member-impact--box {
@@ -221,14 +223,14 @@ html {
   font-size: 1rem;
 }
 .main .main--member-impact .member-impact--box .box--item .item--number {
-  color: #e33d6c;
+  color: rgb(227, 61, 108);
   font-size: 3rem;
 }
 
 .action {
   position: relative;
   top: -9px;
-  border-top: 9px solid #FFCAD4;
+  border-top: 9px solid #d26c7f;
   width: 100%;
   background: #f5ddc0;
   height: auto;
@@ -246,7 +248,7 @@ html {
   align-items: center;
 }
 .action .action--title {
-  color: #e33d6c;
+  color: rgb(227, 61, 108);
   font-family: "Space Mono", monospace;
   font-size: 1.7rem;
   text-transform: uppercase;
@@ -262,7 +264,7 @@ html {
 .action .action--arrow-down {
   position: relative;
   font-size: 3.5rem;
-  color: #e33d6c;
+  color: rgb(227, 61, 108);
   rotate: 90deg;
   animation: 0.5s cubic-bezier(0.215, 0.61, 0.355, 1) alternate-reverse infinite up-and-down;
 }
@@ -282,12 +284,12 @@ html {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 0px 7vw 40px;
+  padding: 0px 7vw 90px;
   max-width: 1300px;
   margin: auto;
 }
 .giveaway .giveaway--title {
-  color: #e33d6c;
+  color: rgb(227, 61, 108);
   font-family: "Space Mono", monospace;
   font-size: 2.3rem;
   text-align: center;
@@ -304,20 +306,72 @@ html {
   margin-bottom: 40px;
 }
 .giveaway .giveaway--button {
-  background: #e33d6c;
+  background: rgb(227, 61, 108);
   font-size: 1.1rem;
   font-family: "Signika Negative", sans-serif;
   color: #fff;
   border: none;
   outline: none;
   padding: 10px 20px;
-  border: 2px solid #e33d6c;
+  border: 2px solid rgb(227, 61, 108);
   transition: 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 .giveaway .giveaway--button:hover {
   cursor: pointer;
   background: #fff;
-  color: #e33d6c;
+  color: rgb(227, 61, 108);
+}
+
+.footer {
+  width: 100%;
+  height: auto;
+  background: url("/img/blob-scene-haikei.svg");
+  background-size: cover;
+  padding: 40px 7vw;
+}
+.footer .footer--content {
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 600px;
+}
+.footer .footer--content .content--copyrights {
+  font-size: 1.2rem;
+  color: rgb(227, 61, 108);
+  font-family: "Signika Negative", sans-serif;
+  margin: 20px 0px;
+  text-align: center;
+}
+.footer .footer--content .content--items {
+  display: flex;
+  flex-direction: column;
+  align-self: flex-start;
+}
+.footer .footer--content .content--items .items--item {
+  display: flex;
+  align-items: center;
+  margin: 20px 0px;
+}
+.footer .footer--content .content--items .items--item img {
+  width: 40px;
+  margin-right: clamp(15px, 5vw, 45px);
+}
+.footer .footer--content .content--items .items--item p, .footer .footer--content .content--items .items--item a {
+  color: rgb(96, 96, 96);
+  font-family: "Space Mono", monospace;
+  font-size: 0.9rem;
+}
+.footer .footer--content .content--items .items--item a {
+  color: rgb(227, 61, 108);
+}
+.footer .footer--content .content--paragraph {
+  color: rgb(96, 96, 96);
+  font-family: "Signika Negative", sans-serif;
+  font-weight: 100;
+  font-size: 0.9rem;
+  align-self: flex-start;
+  margin: 20px 0px;
 }
 
 @keyframes up-and-down {
@@ -350,7 +404,7 @@ html {
             backdrop-filter: unset;
     position: relative;
     left: 0px !important;
-    height: 130px;
+    height: 80px;
     max-width: 1200px;
     justify-self: center;
     flex-direction: row;
@@ -363,6 +417,10 @@ html {
   }
   .nav .nav--item .nav--link {
     font-size: clamp(16px, 1.5rem, 28px) !important;
+  }
+  .nav .nav--item .nav--link:hover {
+    background: rgba(227, 61, 108, 0.8);
+    color: #fff !important;
   }
   .header--title {
     text-align: center;
