@@ -160,7 +160,7 @@ html, body {
 .header .header--paragraph .paragraph--span {
   text-shadow: none;
   text-transform: uppercase;
-  background-image: linear-gradient(-225deg, #fff 0%, rgb(221, 159, 177) 100%);
+  background-image: linear-gradient(-225deg, #fff 0%, rgb(227, 61, 108) 100%);
   background-size: auto auto;
   background-clip: border-box;
   background-size: 200% auto;
@@ -168,7 +168,7 @@ html, body {
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  animation: textclip 2s cubic-bezier(0.075, 0.82, 0.165, 1) infinite;
+  animation: textclip 2s cubic-bezier(0.165, 0.84, 0.44, 1) infinite;
   display: inline-block;
   font-size: clamp(1.5rem, 6vw, 2rem);
 }

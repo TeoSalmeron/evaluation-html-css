@@ -206,7 +206,7 @@ $font--4: 'Open Sans', sans-serif;
             background-image: linear-gradient(
               -225deg,
               #fff 0%,
-              $color--5 100%
+              $color--6 100%
             );
             background-size: auto auto;
             background-clip: border-box;
@@ -215,7 +215,7 @@ $font--4: 'Open Sans', sans-serif;
             background-clip: text;
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
-            animation: textclip 2s cubic-bezier(0.075, 0.82, 0.165, 1) infinite;
+            animation: textclip 2s cubic-bezier(0.165, 0.84, 0.44, 1) infinite;
             display: inline-block;
             font-size: clamp(1.5rem, 6vw, 2rem);
         }
