@@ -284,7 +284,9 @@ $font--4: 'Open Sans', sans-serif;
             font-size: clamp(2.1rem, 7vw, 2.5rem);
             font-family: $font--2;
             color: $color--6;
+            font-weight: bold;
             text-transform: uppercase;
+            text-align: center;
         }
 
         .member-impact--title2 {
@@ -465,9 +467,10 @@ $font--4: 'Open Sans', sans-serif;
     .giveaway--title {
         color: $color--6;
         font-family: $font--2;
-        font-size: 2.3rem;
+        font-size: 1.7rem;
         text-align: center;
         margin-bottom: 40px;
+        text-transform: uppercase;
     }
 
     .giveaway--paragraph {
