@@ -55,7 +55,7 @@ html, body {
 .nav .nav--button img {
   width: 50px;
 }
-.nav .nav--title {
+.nav .nav--link {
   position: relative;
   color: rgb(227, 61, 108);
   font-family: "Space Mono", monospace;
@@ -66,7 +66,7 @@ html, body {
   display: flex;
   align-items: center;
 }
-.nav .nav--title img {
+.nav .nav--link img {
   width: clamp(23px, 7vw, 29px);
   position: relative;
   left: 2.5vw;
@@ -138,7 +138,7 @@ html, body {
   padding: 10px 20px;
   border-radius: 0px;
   text-transform: uppercase;
-  font-size: 1.1rem;
+  font-size: 21px;
   box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.18);
   font-weight: 500;
   transition: 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
@@ -179,12 +179,18 @@ html, body {
 }
 
 .main {
-  padding: 40px 7vw 0px;
-  background-size: cover;
+  background: #fff;
+  padding: 40px 7vw;
   display: flex;
   flex-direction: column;
   align-items: center;
   margin: auto;
+  box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.26);
+}
+.main .main--presentation {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 .main h2 {
   position: relative;
@@ -192,8 +198,8 @@ html, body {
   margin: 30px 0px;
   font-family: "Space Mono", monospace;
   color: rgb(227, 61, 108);
-  font-size: 1.7rem;
-  max-width: 500px;
+  font-size: clamp(25px, 7vw, 30px);
+  max-width: 800px;
   text-align: center;
   text-transform: uppercase;
 }
@@ -202,50 +208,38 @@ html, body {
   z-index: 5;
   font-family: "Signika Negative", sans-serif;
   color: gray;
-  font-size: 1.2rem;
+  font-size: 19px;
   text-align: justify;
 }
 .main .main--last-paragraph {
-  margin-bottom: 70px;
+  margin-bottom: 30px;
 }
 .main .main--member-impact {
-  border-left: 9px solid #fab6c2;
-  border-right: 9px solid #fab6c2;
-  border-top: 9px solid #fab6c2;
   width: 100%;
-  height: auto;
-  background: #f5ddc0;
-  border-bottom-left-radius: 0px;
-  border-bottom-right-radius: 0px;
-  padding: 20px 7vw 0px;
+  height: 650px;
+  padding: 10px 7vw;
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: space-evenly;
   position: relative;
   z-index: 5;
-  overflow-x: hidden;
 }
 .main .main--member-impact .member-impact--title {
-  font-size: clamp(2.1rem, 7vw, 2.5rem);
+  font-size: clamp(25px, 7vw, 30px);
   font-family: "Space Mono", monospace;
   color: rgb(227, 61, 108);
   font-weight: bold;
   text-transform: uppercase;
   text-align: center;
 }
-.main .main--member-impact .member-impact--title2 {
-  font-size: clamp(1.3rem, 5vw, 1.7rem);
-  font-style: italic;
-  font-family: "Signika Negative", sans-serif;
-  color: rgb(221, 159, 177);
-  text-transform: uppercase;
-}
 .main .main--member-impact .member-impact--box {
   display: flex;
   flex-direction: column;
 }
 .main .main--member-impact .member-impact--box .box--item {
-  background: #fff;
+  box-shadow: inset 0px 0px 29px 0px rgba(0, 0, 0, 0.22) !important;
+  background: rgb(227, 61, 108);
   border-radius: 50%;
   text-align: center;
   padding: 10px;
@@ -259,26 +253,31 @@ html, body {
 }
 .main .main--member-impact .member-impact--box .box--item .item--title {
   font-family: "Signika Negative", sans-serif;
-  color: gray;
+  color: #fff;
   font-size: 1rem;
 }
 .main .main--member-impact .member-impact--box .box--item .item--number {
-  color: rgb(227, 61, 108);
-  font-size: 3rem;
+  color: #fff;
+  font-size: 3.4rem;
+  font-weight: 600;
 }
 
 .events-main {
+  max-width: 1300px;
   width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
   color: black;
   padding: 40px 7vw;
+  box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.26);
+  margin-right: auto;
+  margin-left: auto;
 }
 .events-main .events-main--title {
   color: rgb(227, 61, 108);
   font-family: "Space Mono", monospace;
-  font-size: clamp(2rem, 5vw, 2.5rem);
+  font-size: clamp(25px, 7vw, 30px);
   text-align: center;
   text-transform: uppercase;
 }
@@ -311,7 +310,7 @@ html, body {
   border: none;
   outline: none;
   padding: 10px 20px;
-  font-size: 1.1rem;
+  font-size: 21px;
   background: rgb(227, 61, 108);
   color: #fff;
   text-transform: uppercase;
@@ -323,88 +322,36 @@ html, body {
   color: rgb(227, 61, 108);
 }
 
-.action {
-  position: relative;
-  top: -9px;
-  border-top: 9px solid #fab6c2;
-  width: 100%;
-  background: #f5ddc0;
-  height: auto;
-  font-family: "Signika Negative", sans-serif;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.action .action--content {
-  width: 100%;
-  padding: 20px 7vw;
-  max-width: 1300px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-.action .action--title {
-  color: rgb(227, 61, 108);
-  font-family: "Space Mono", monospace;
-  font-size: 1.7rem;
-  text-transform: uppercase;
-  margin: 20px 0px;
-}
-.action .action--paragraph {
-  width: 100%;
-  color: gray;
-  font-size: 1.2rem;
-  text-align: justify;
-  margin: 20px 0px;
-}
-.action .action--arrow-down {
-  position: relative;
-  font-size: 3.5rem;
-  color: rgb(227, 61, 108);
-  rotate: 90deg;
-  animation: 0.5s cubic-bezier(0.215, 0.61, 0.355, 1) alternate-reverse infinite up-and-down;
-}
-
-.separator {
-  position: relative;
-  top: -9px;
-  z-index: -1;
-  width: 100%;
-  height: 150px;
-  background: url("../img/background-top-waves.svg");
-  background-size: cover;
-}
-
-.giveaway {
+.donate {
+  padding: 20px 0px;
   width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 0px 7vw 90px;
   max-width: 1300px;
   margin: auto;
 }
-.giveaway .giveaway--title {
+.donate .donate--title {
   color: rgb(227, 61, 108);
   font-family: "Space Mono", monospace;
-  font-size: 1.7rem;
+  font-size: clamp(25px, 7vw, 30px);
   text-align: center;
-  margin-bottom: 40px;
+  margin-bottom: 20px;
   text-transform: uppercase;
 }
-.giveaway .giveaway--paragraph {
+.donate .donate--paragraph {
   font-family: "Signika Negative", sans-serif;
   color: gray;
   text-align: justify;
-  font-size: 1.2rem;
+  font-size: 19px;
   margin: 20px 0px;
 }
-.giveaway .last-paragraph {
+.donate .last-paragraph {
   margin-bottom: 40px;
 }
-.giveaway .giveaway--button {
+.donate .donate--button {
   background: rgb(227, 61, 108);
-  font-size: 1.1rem;
+  font-size: 21px;
   font-family: "Signika Negative", sans-serif;
   color: #fff;
   border: none;
@@ -413,7 +360,7 @@ html, body {
   border: 2px solid rgb(227, 61, 108);
   transition: 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
 }
-.giveaway .giveaway--button:hover {
+.donate .donate--button:hover {
   cursor: pointer;
   background: #fff;
   color: rgb(227, 61, 108);
@@ -486,7 +433,10 @@ html, body {
     background-position: 200% center;
   }
 }
-@media screen and (min-width: 650px) {
+@media screen and (min-width: 750px) {
+  .main .main--member-impact {
+    height: 350px !important;
+  }
   .main .member-impact--box {
     flex-direction: row !important;
     justify-content: space-evenly;
@@ -494,9 +444,6 @@ html, body {
   }
 }
 @media screen and (min-width: 1150px) {
-  .nav {
-    justify-content: center;
-  }
   .nav .nav--title {
     display: none;
   }
@@ -509,7 +456,7 @@ html, body {
     position: relative;
     left: 0px !important;
     height: 80px;
-    max-width: 1200px;
+    max-width: 500px;
     justify-self: center;
     flex-direction: row;
     justify-content: space-evenly;
@@ -523,7 +470,7 @@ html, body {
     font-size: clamp(16px, 1.5rem, 28px) !important;
   }
   .nav .nav--item .nav--link:hover {
-    letter-spacing: 2px;
+    color: #fff;
   }
   .header--title {
     max-width: 900px;

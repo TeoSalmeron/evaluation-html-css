@@ -12,7 +12,6 @@ const navLinks = document.getElementsByClassName("nav--link")
 
 // FUNCTIONS
 
-//---> Toggle navigation bar menu
 navToggleMenu.addEventListener('click', () => {
     navList.style.left = "0px"
     navToggleMenu.style.display = "none"
@@ -27,23 +26,3 @@ navCloseMenu.addEventListener('click', () => {
         navCloseMenu.style.display = "none"
     }, 300);
 })
-
-//---> Hover effect on nav links
-// for (let link of navLinks) {
-//     link.addEventListener('mouseenter', (e) => {
-//         let targetLink = e.target
-//         for(let link of navLinks) {
-//             if(link !== targetLink) {
-//                 link.style.color = "rgb(207, 157, 171)"
-//             } else {
-//                 link.style.color = "#e33d6c"
-//             }
-//         }
-//     })
-
-//     link.addEventListener('mouseleave', () => {
-//         for(let link of navLinks) {
-//             link.style.color = "#e33d6c"
-//         }
-//     })
-// }

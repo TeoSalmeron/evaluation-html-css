@@ -20,10 +20,15 @@ html, body {
 // DEFINE VARIABLES
 $color--1: #f5ddc0;
 $color--2: #fab6c2;
-$color--3: #D8E2DC;
+$color--3: #49a16c;
 $color--4: #479a51;
-$color--5: rgb(221, 159, 177);
+$color--5: rgb(144, 202, 125);
 $color--6: rgb(227, 61, 108);
+
+$font--size-h1: clamp(45px, 7vw, 65px);
+$font--size-h2: clamp(25px, 7vw, 30px);
+$font--size-par: 19px;
+$font--size-button: 21px;
 
 $font--1: 'Signika Negative', sans-serif;
 $font--2: 'Space Mono', monospace;
@@ -85,7 +90,7 @@ $font--4: 'Open Sans', sans-serif;
         }
     }
 
-    .nav--title {
+    .nav--link {
         position: relative;
         color: $color--6;
         font-family: $font--2;
@@ -175,7 +180,7 @@ $font--4: 'Open Sans', sans-serif;
         padding: 10px 20px;
         border-radius: 0px;
         text-transform: uppercase;
-        font-size: 1.1rem;
+        font-size: $font--size-button;
         -webkit-box-shadow: 0px 1px 3px 1px rgba(0,0,0,0.18);
         -moz-box-shadow: 0px 1px 3px 1px rgba(0,0,0,0.18);
         box-shadow: 0px 1px 3px 1px rgba(0,0,0,0.18);
@@ -231,12 +236,20 @@ $font--4: 'Open Sans', sans-serif;
 
 // MAIN
 .main {
-    padding: 40px 7vw 0px;
-    background-size: cover;
+    background: #fff;
+    padding: 40px 7vw;
     display: flex;
     flex-direction: column;
     align-items: center;
     margin: auto;
+    -webkit-box-shadow: 0px 0px 4px 0px rgba(0,0,0,0.26); 
+    box-shadow: 0px 0px 4px 0px rgba(0,0,0,0.26);
+
+    .main--presentation {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
     
     h2 {
         position: relative;
@@ -244,8 +257,8 @@ $font--4: 'Open Sans', sans-serif;
         margin: 30px 0px;
         font-family: $font--2;
         color: $color--6;
-        font-size: 1.7rem;
-        max-width: 500px;
+        font-size: $font--size-h2;
+        max-width: 800px;
         text-align: center;
         text-transform: uppercase;
     }
@@ -255,54 +268,43 @@ $font--4: 'Open Sans', sans-serif;
         z-index: 5;
         font-family: $font--1;
         color: gray;
-        font-size: 1.2rem;
+        font-size: $font--size-par;
         text-align: justify;
     }
 
     .main--last-paragraph {
-        margin-bottom: 70px;
+        margin-bottom: 30px;
     }
 
     .main--member-impact {
-        border-left: 9px solid $color--2;
-        border-right: 9px solid $color--2;
-        border-top: 9px solid $color--2;
         width: 100%;
-        height: auto;
-        background: $color--1;
-        border-bottom-left-radius: 0px;
-        border-bottom-right-radius: 0px;
-        padding: 20px 7vw 0px;
+        height: 650px;
+        padding: 10px 7vw;
         display: flex;
         flex-direction: column;
         align-items: center;
+        justify-content: space-evenly;
         position: relative;
         z-index: 5;
-        overflow-x: hidden;
+        // overflow-x: hidden;
 
         .member-impact--title {
-            font-size: clamp(2.1rem, 7vw, 2.5rem);
+            font-size: $font--size-h2;
             font-family: $font--2;
             color: $color--6;
             font-weight: bold;
             text-transform: uppercase;
             text-align: center;
         }
-
-        .member-impact--title2 {
-            font-size: clamp(1.3rem, 5vw, 1.7rem);
-            font-style: italic;
-            font-family: $font--1;
-            color: $color--5;
-            text-transform: uppercase;
-        }
-
+        
         .member-impact--box {
             display: flex;
             flex-direction: column;
 
             .box--item {
-                background: #fff;
+                -webkit-box-shadow: inset 0px 0px 29px 0px rgba(0,0,0,0.22) !important;
+                box-shadow: inset 0px 0px 29px 0px rgba(0,0,0,0.22) !important;
+                background: $color--6;
                 border-radius: 50%;
                 text-align: center;
                 padding: 10px;
@@ -316,13 +318,14 @@ $font--4: 'Open Sans', sans-serif;
     
                 .item--title {
                     font-family: $font--1;
-                    color: gray;
+                    color: #fff;
                     font-size: 1rem;
                 }
     
                 .item--number {
-                    color: $color--6;
-                    font-size: 3rem;
+                    color: #fff;
+                    font-size: 3.4rem;
+                    font-weight: 600;
                 }
             }
         }
@@ -331,17 +334,22 @@ $font--4: 'Open Sans', sans-serif;
 }
 
 .events-main {
+    max-width: 1300px;
     width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
     color: black;
     padding: 40px 7vw;
+    -webkit-box-shadow: 0px 0px 4px 0px rgba(0,0,0,0.26); 
+    box-shadow: 0px 0px 4px 0px rgba(0,0,0,0.26);
+    margin-right: auto;
+    margin-left: auto;
 
     .events-main--title {
         color: $color--6;
         font-family: $font--2;
-        font-size: clamp(2rem, 5vw, 2.5rem);
+        font-size: $font--size-h2;
         text-align: center;
         text-transform: uppercase;
     }
@@ -378,7 +386,7 @@ $font--4: 'Open Sans', sans-serif;
             border: none;
             outline: none;
             padding: 10px 20px;
-            font-size: 1.1rem;
+            font-size: $font--size-button;
             background: $color--6;
             color: #fff;
             text-transform: uppercase;
@@ -393,91 +401,31 @@ $font--4: 'Open Sans', sans-serif;
 }
 // END MAIN
 
-// SECTION ACTION
-.action {
-    position: relative;
-    top: -9px;
-    border-top: 9px solid $color--2;
-    width: 100%;
-    background: $color--1;
-    height: auto;
-    font-family: $font--1;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    .action--content {
-        width: 100%;
-        padding: 20px 7vw;
-        max-width: 1300px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .action--title {
-        color: $color--6;
-        font-family: $font--2;
-        font-size: 1.7rem;
-        text-transform: uppercase;
-        margin: 20px 0px;
-    }
-
-    .action--paragraph {
-        width: 100%;
-        color: gray;
-        font-size: 1.2rem;
-        text-align: justify;
-        margin: 20px 0px;
-    }
-    
-    .action--arrow-down {
-        position: relative;
-        font-size: 3.5rem;
-        color: $color--6;
-        rotate: 90deg;
-        animation: 0.5s cubic-bezier(0.215, 0.610, 0.355, 1) alternate-reverse infinite up-and-down;
-    }
-}
-// END SECTION ACTION
-
-// SECTION SEPARATOR
-.separator {
-    position: relative;
-    top: -9px;
-    z-index: -1;
-    width: 100%;
-    height: 150px;
-    background: url("../img/background-top-waves.svg");
-    background-size: cover;
-}
-// END SEPARATOR
-
-// GIVEAWAY
-.giveaway {
+// DONATE
+.donate {
+    padding: 20px 0px;
     width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 0px 7vw 90px;
     max-width: 1300px;
     margin: auto;
 
 
-    .giveaway--title {
+    .donate--title {
         color: $color--6;
         font-family: $font--2;
-        font-size: 1.7rem;
+        font-size: $font--size-h2;
         text-align: center;
-        margin-bottom: 40px;
+        margin-bottom: 20px;
         text-transform: uppercase;
     }
 
-    .giveaway--paragraph {
+    .donate--paragraph {
         font-family: $font--1;
         color: gray;
         text-align: justify;
-        font-size: 1.2rem;
+        font-size: $font--size-par;
         margin: 20px 0px;
     }
 
@@ -485,9 +433,9 @@ $font--4: 'Open Sans', sans-serif;
         margin-bottom: 40px;
     }
 
-    .giveaway--button {
+    .donate--button {
         background: $color--6;
-        font-size: 1.1rem;
+        font-size: $font--size-button;
         font-family: $font--1;
         color: #fff;
         border: none;
@@ -502,7 +450,7 @@ $font--4: 'Open Sans', sans-serif;
         }
     }
 }
-// END GIVEAWAY
+// END DONATE
 
 // FOOTER
 .footer {
@@ -589,9 +537,13 @@ $font--4: 'Open Sans', sans-serif;
 // END ANIMATIONS
 
 // MEDIA QUERIES
-@media screen and (min-width: 650px) {
+@media screen and (min-width: 750px) {
     // MAIN
     .main {
+
+        .main--member-impact {
+            height: 350px !important;
+        }
         .member-impact--box {
             flex-direction: row !important;
             justify-content: space-evenly;
@@ -605,7 +557,7 @@ $font--4: 'Open Sans', sans-serif;
 
     // NAVIGATION BAR
     .nav {
-        justify-content: center;
+        // justify-content: space-around;
 
         .nav--title {
             display: none;
@@ -620,7 +572,7 @@ $font--4: 'Open Sans', sans-serif;
             position: relative;
             left: 0px !important;
             height: 80px;
-            max-width: 1200px;
+            max-width: 500px;
             justify-self: center;
             flex-direction: row;
             justify-content: space-evenly;
@@ -637,7 +589,7 @@ $font--4: 'Open Sans', sans-serif;
                 font-size: clamp(16px, 1.5rem, 28px) !important;
 
                 &:hover {
-                    letter-spacing: 2px;
+                    color: #fff;
                 }
             }
         }
